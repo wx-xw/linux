@@ -1,1 +1,8 @@
-alias ll="ls -lF"
+alias grep='grep --colour=auto'
+alias ll='ls -lF'
+alias ls='ls --color=auto'
+
+alias lock='xscreensaver-command -lock'
+alias vitmp='vim /tmp/tmp_`date +%s`'
+
+alias scp='scp -P22022'

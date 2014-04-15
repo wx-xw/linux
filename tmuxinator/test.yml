@@ -1,0 +1,16 @@
+name: test
+root: ~/
+
+windows:
+  - config:
+    - go config
+    - cd /opt/solr
+  - offline:
+    - go offline
+    - cd /opt/solr
+  - test1:
+    - go test1
+    - cd /opt/solr
+  - test2:
+    - go test2
+    - cd /opt/solr

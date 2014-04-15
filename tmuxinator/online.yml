@@ -1,0 +1,22 @@
+name: online
+root: ~/
+
+windows:
+  - config:
+    - go config
+    - cd /opt/solr
+  - offline:
+    - go offline
+    - cd /opt/solr
+  - youku1:
+    - go youku1
+    - cd /opt/solr
+  - youku2:
+    - go youku2
+    - cd /opt/solr
+  - youku3:
+    - go youku3
+    - cd /opt/solr
+  - youku4:
+    - go youku4
+    - cd /opt/solr

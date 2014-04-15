@@ -1,3 +1,12 @@
 timestamp() {
     date -d "1970-01-01 UTC $1 seconds"
 }
+go() {
+    ssh -p22022 root@$1
+}
+gohadoop() {
+    ssh -p22022 soku@hadoop
+}
+ggo() {
+    gsh --ssh='ssh -oUserKnownHostsFile=/dev/null -oStrictHostKeyChecking=no -t %(host)s -p 22022 -l root bash --noprofile' --hosts-file=$1
+}

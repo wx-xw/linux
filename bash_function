@@ -4,9 +4,18 @@ timestamp() {
 go() {
     ssh -p22022 root@$1
 }
+cpgo() {
+	FILE_PATH=`pwd`"/"$1
+	echo "copy "$FILE_PATH" to root@"$2":/root/ and go to "$2
+
+	scp -P22022 -r $FILE_PATH root@$2:/root/ && ssh -p22022 root@$2
+}
 gohadoop() {
     ssh -p22022 soku@hadoop
 }
 ggo() {
     gsh --ssh='ssh -oUserKnownHostsFile=/dev/null -oStrictHostKeyChecking=no -t %(host)s -p 22022 -l root bash --noprofile' --hosts-file=$1
+}
+pid() {
+	ps aux | grep -v grep | grep $1 
 }

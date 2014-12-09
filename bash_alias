@@ -1,6 +1,6 @@
 alias grep='grep --color'
-alias ls='ls -G'
-alias ll='ls -lG'
+alias ls='ls -G --color=auto'
+alias ll='ls -lG --color=auto'
 
 alias lock='xscreensaver-command -lock'
 alias vitmp='vim /tmp/tmp_`date +%s`'
